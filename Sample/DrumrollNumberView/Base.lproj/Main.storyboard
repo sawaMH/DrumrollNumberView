@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrumrollNumberView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yll-kQ-Gef" customClass="DrumrollNumberView" customModule="DrumrollNumberView" customModuleProvider="target">
+                                <rect key="frame" x="50" y="178" width="500" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Z7y-20-zsu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="randomMode" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zR1-eB-w0O">
+                                <rect key="frame" x="50" y="236" width="500" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8CG-EL-ZyS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gee-s6-j9v">
+                                <rect key="frame" x="50" y="293" width="160" height="70"/>
+                                <color key="backgroundColor" red="0.62670454549999999" green="0.90319602269999999" blue="0.72275094699999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="vQa-rz-Dag"/>
+                                </constraints>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqE-Ax-1hk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4e-0t-vIl">
+                                <rect key="frame" x="220" y="293" width="160" height="70"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.63529411759999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="9Ns-iZ-ib9"/>
+                                </constraints>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseButtonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tEb-Bc-cMP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBd-2p-dD3">
+                                <rect key="frame" x="390" y="293" width="160" height="70"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.1843137255" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="pTA-yJ-kVk"/>
+                                </constraints>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopButtonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GQn-Gx-EIp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YC-ac-Zkk">
+                                <rect key="frame" x="50" y="120" width="500" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0Ge-uo-7wB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gee-s6-j9v" firstAttribute="top" secondItem="zR1-eB-w0O" secondAttribute="bottom" constant="27" id="4Sm-VP-bLx"/>
+                            <constraint firstItem="zR1-eB-w0O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="4ad-rX-bgu"/>
+                            <constraint firstItem="v4e-0t-vIl" firstAttribute="top" secondItem="zR1-eB-w0O" secondAttribute="bottom" constant="27" id="4n5-c3-wIe"/>
+                            <constraint firstItem="Gee-s6-j9v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="5Rd-Ui-Zmv"/>
+                            <constraint firstItem="ZBd-2p-dD3" firstAttribute="height" secondItem="Gee-s6-j9v" secondAttribute="height" id="75V-27-XKz"/>
+                            <constraint firstAttribute="trailing" secondItem="yll-kQ-Gef" secondAttribute="trailing" constant="50" id="EGM-0E-Z6b"/>
+                            <constraint firstItem="zR1-eB-w0O" firstAttribute="top" secondItem="yll-kQ-Gef" secondAttribute="bottom" constant="8" id="F6o-sK-06H"/>
+                            <constraint firstItem="yll-kQ-Gef" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="STr-Qg-UFO"/>
+                            <constraint firstItem="3YC-ac-Zkk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="XvG-yh-U5h"/>
+                            <constraint firstItem="3YC-ac-Zkk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="ehS-YJ-huH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZBd-2p-dD3" secondAttribute="trailing" constant="30" id="fYR-a5-uDp"/>
+                            <constraint firstItem="v4e-0t-vIl" firstAttribute="width" secondItem="Gee-s6-j9v" secondAttribute="width" id="hQK-Mv-4jT"/>
+                            <constraint firstAttribute="trailing" secondItem="zR1-eB-w0O" secondAttribute="trailing" constant="50" id="jVX-ga-BCR"/>
+                            <constraint firstItem="v4e-0t-vIl" firstAttribute="leading" secondItem="Gee-s6-j9v" secondAttribute="trailing" constant="10" id="js8-HG-Ew0"/>
+                            <constraint firstItem="ZBd-2p-dD3" firstAttribute="width" secondItem="Gee-s6-j9v" secondAttribute="width" id="ocM-MJ-LIb"/>
+                            <constraint firstItem="ZBd-2p-dD3" firstAttribute="leading" secondItem="v4e-0t-vIl" secondAttribute="trailing" constant="10" id="poK-dq-CLC"/>
+                            <constraint firstItem="yll-kQ-Gef" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="158" id="sRa-Ze-DK4"/>
+                            <constraint firstItem="ZBd-2p-dD3" firstAttribute="top" secondItem="zR1-eB-w0O" secondAttribute="bottom" constant="27" id="x1p-f1-lZj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3YC-ac-Zkk" secondAttribute="trailing" constant="30" id="yq1-ud-BMs"/>
+                            <constraint firstItem="v4e-0t-vIl" firstAttribute="height" secondItem="Gee-s6-j9v" secondAttribute="height" id="z4c-ZG-3Kt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drumrollNumberView" destination="yll-kQ-Gef" id="Hxu-sR-a53"/>
+                        <outlet property="numberLabel" destination="3YC-ac-Zkk" id="1ln-eM-yVS"/>
+                        <outlet property="numberTextField" destination="zR1-eB-w0O" id="H2o-m0-VTR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="389"/>
+        </scene>
+    </scenes>
+</document>
